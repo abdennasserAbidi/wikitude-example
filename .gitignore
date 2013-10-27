@@ -1,5 +1,8 @@
-/gen
-/out
-*.iml
+main/gen
+main/out
+main/*.iml
+wikitude/gen
+wikitude/out
+wikitude/*.iml
 .idea
 /.settings

@@ -29,7 +29,7 @@ public class MyActivity extends Activity {
         try {
             intent = new Intent(context, Class.forName(className));
             intent.putExtra(EXTRAS_KEY_ACTIVITY_TITLE_STRING, "1.1 Image On Target");
-            intent.putExtra(EXTRAS_KEY_ACTIVITY_ARCHITECT_WORLD_URL, "samples/1_Image$Recognition_1_Image$On$Target/index.html");
+            intent.putExtra(EXTRAS_KEY_ACTIVITY_ARCHITECT_WORLD_URL, "samples/gdgdevfestsur/index.html");
 
             startActivity(intent);
 
