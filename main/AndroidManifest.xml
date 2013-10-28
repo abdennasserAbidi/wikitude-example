@@ -63,8 +63,36 @@
             </intent-filter>
         </activity>
 
+         <activity android:name="com.wikitude.samples.MainActivity"/>
+
+        <!-- overview / listactivities -->
+        <activity android:name="com.wikitude.samples.MainSamplesListActivity"/>
+
+        <!-- poi detail screen -->
+        <activity android:name="com.wikitude.samples.SamplePoiDetailActivity"/>
+
+        <!-- cam activities -->
+        <activity android:name="com.wikitude.samples.SampleCamActivity" android:configChanges="orientation|keyboardHidden|screenSize"/>
+        <activity android:name="com.wikitude.samples.SampleCamCaptureScreenActivity" android:configChanges="orientation|keyboardHidden|screenSize"/>
+        <activity android:name="com.wikitude.samples.SampleCamContentFromNativeActivity" android:configChanges="orientation|keyboardHidden|screenSize"/>
+        <activity android:name="com.wikitude.samples.SampleCamHandlePoiDetailActivity" android:configChanges="orientation|keyboardHidden|screenSize"/>
+
+        <!-- URL Launcher -->
         <activity
-            android:name="com.wikitude.samples.SampleCamActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"/>
+            android:name="com.wikitude.samples.utils.urllauncher.ARchitectUrlLauncherActivity"
+            android:label="@string/main_title_urlLauncher" />
+        <activity
+            android:name="com.wikitude.samples.utils.urllauncher.ARchitectUrlLauncherCamActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/main_title_urlLauncher" />
+
+        <!-- in case mediaplayer is used -->
+		<activity android:name="com.wikitude.tools.activities.MediaPlayerActivity"
+			android:screenOrientation="landscape">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
     </application>
 </manifest>

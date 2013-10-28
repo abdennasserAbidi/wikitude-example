@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 import com.wikitude.samples.MainActivity;
 import com.wikitude.samples.MainSamplesListActivity;
@@ -24,18 +26,34 @@ public class MyActivity extends Activity {
 
         context = this;
 
-        Intent intent = null;
-        String className = "com.wikitude.samples.SampleCamActivity";
-        try {
-            intent = new Intent(context, Class.forName(className));
-            intent.putExtra(EXTRAS_KEY_ACTIVITY_TITLE_STRING, "1.1 Image On Target");
-            intent.putExtra(EXTRAS_KEY_ACTIVITY_ARCHITECT_WORLD_URL, "samples/gdgdevfestsur/index.html");
+        Button own = (Button) findViewById(R.id.own);
+        Button examples = (Button) findViewById(R.id.examples);
 
-            startActivity(intent);
+        own.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = null;
+                String className = "com.wikitude.samples.SampleCamActivity";
+                try {
+                    intent = new Intent(context, Class.forName(className));
+                    intent.putExtra(EXTRAS_KEY_ACTIVITY_TITLE_STRING, "1.1 Image On Target");
+                    intent.putExtra(EXTRAS_KEY_ACTIVITY_ARCHITECT_WORLD_URL, "samples/gdgdevfestsur/index.html");
 
-        } catch (Exception e) {
-            Toast.makeText(this, className + "\nnot defined/accessible",
-                    Toast.LENGTH_SHORT).show();
-        }
+                    startActivity(intent);
+
+                } catch (Exception e) {
+                    Toast.makeText(context, className + "\nnot defined/accessible", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        examples.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }
