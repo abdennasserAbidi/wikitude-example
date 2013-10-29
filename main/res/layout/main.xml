@@ -3,22 +3,61 @@
               android:orientation="vertical"
               android:layout_width="fill_parent"
               android:layout_height="fill_parent"
+              android:background="@drawable/fondo"
     >
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="My own app"
-        android:id="@+id/own"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentTop="true"/>
+    <RelativeLayout
+            android:id="@+id/rowOwnApp"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Wikitude examples"
-        android:id="@+id/examples"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"/>
+        <Button
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/own"
+            android:background="@drawable/integracion"
+            android:layout_marginLeft="30dp"
+            android:layout_alignParentLeft="true"/>
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_toRightOf="@id/own"
+            android:layout_marginLeft="50dp"
+            android:layout_centerInParent="true"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:text="My own app" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:id="@+id/rowWikitude"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rowOwnApp">
+
+        <Button
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:id="@+id/examples"
+                android:background="@drawable/wikitude"
+                android:layout_marginLeft="30dp"
+                android:layout_alignParentLeft="true"/>
+
+        <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_toRightOf="@id/examples"
+                android:layout_marginLeft="50dp"
+                android:layout_centerInParent="true"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:text="Wikitude examples" />
+
+    </RelativeLayout>
+
 </RelativeLayout>
 

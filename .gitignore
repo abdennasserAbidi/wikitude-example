@@ -6,3 +6,4 @@ wikitude/out
 wikitude/*.iml
 .idea
 /.settings
+out/

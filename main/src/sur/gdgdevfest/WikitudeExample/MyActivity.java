@@ -36,7 +36,7 @@ public class MyActivity extends Activity {
                 String className = "com.wikitude.samples.SampleCamActivity";
                 try {
                     intent = new Intent(context, Class.forName(className));
-                    intent.putExtra(EXTRAS_KEY_ACTIVITY_TITLE_STRING, "1.1 Image On Target");
+                    intent.putExtra(EXTRAS_KEY_ACTIVITY_TITLE_STRING, "My own app");
                     intent.putExtra(EXTRAS_KEY_ACTIVITY_ARCHITECT_WORLD_URL, "samples/gdgdevfestsur/index.html");
 
                     startActivity(intent);
