@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 import com.wikitude.samples.MainActivity;
 import com.wikitude.samples.MainSamplesListActivity;
@@ -26,10 +27,11 @@ public class MyActivity extends Activity {
 
         context = this;
 
-        Button own = (Button) findViewById(R.id.own);
+        Button ownIR = (Button) findViewById(R.id.own);
+        Button ownGPS = (Button) findViewById(R.id.gps);
         Button examples = (Button) findViewById(R.id.examples);
 
-        own.setOnClickListener(new View.OnClickListener() {
+        ownIR.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = null;
@@ -38,6 +40,24 @@ public class MyActivity extends Activity {
                     intent = new Intent(context, Class.forName(className));
                     intent.putExtra(EXTRAS_KEY_ACTIVITY_TITLE_STRING, "My own app");
                     intent.putExtra(EXTRAS_KEY_ACTIVITY_ARCHITECT_WORLD_URL, "samples/gdgdevfestsur/index.html");
+
+                    startActivity(intent);
+
+                } catch (Exception e) {
+                    Toast.makeText(context, className + "\nnot defined/accessible", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        ownGPS.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String className = "com.wikitude.samples.SampleCamHandlePoiDetailActivity";
+
+                try {
+                    final Intent intent = new Intent(context, Class.forName(className));
+                    intent.putExtra(EXTRAS_KEY_ACTIVITY_TITLE_STRING, "My own GPS app");
+                    intent.putExtra(EXTRAS_KEY_ACTIVITY_ARCHITECT_WORLD_URL, "samples/gdgdevfestsurGPS/index.html");
 
                     startActivity(intent);
 

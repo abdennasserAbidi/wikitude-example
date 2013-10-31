@@ -9,7 +9,7 @@
     <RelativeLayout
             android:id="@+id/rowOwnApp"
             android:layout_marginTop="20dp"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
         <Button
@@ -28,16 +28,43 @@
             android:layout_centerInParent="true"
             android:textColor="#000000"
             android:textSize="20sp"
-            android:text="My own app" />
+            android:text="My own IR app" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:id="@+id/rowOwnGps"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rowOwnApp">
+
+        <Button
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:id="@+id/gps"
+                android:background="@drawable/gps"
+                android:layout_marginLeft="30dp"
+                android:layout_alignParentLeft="true"/>
+
+        <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_toRightOf="@id/gps"
+                android:layout_marginLeft="50dp"
+                android:layout_centerInParent="true"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:text="My own GPS app" />
 
     </RelativeLayout>
 
     <RelativeLayout
             android:id="@+id/rowWikitude"
             android:layout_marginTop="20dp"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/rowOwnApp">
+            android:layout_below="@id/rowOwnGps">
 
         <Button
                 android:layout_width="60dp"
@@ -58,6 +85,5 @@
                 android:text="Wikitude examples" />
 
     </RelativeLayout>
-
 </RelativeLayout>
 
