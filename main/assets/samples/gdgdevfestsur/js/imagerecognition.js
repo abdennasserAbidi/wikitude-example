@@ -24,7 +24,7 @@ var World = {
 
 		// For the button
                 this.imgButton = new AR.ImageResource("assets/button.png");
-                var pageOneButton = this.createWwwButton("http://sur.gdgdevfest.com", 0.5, {
+                var pageOneButton = this.createWwwButton("http://www.iesgrancapitan.org/portal/", 0.5, {
                         offsetX: -0.25,
                         offsetY: 0.75
                 });
